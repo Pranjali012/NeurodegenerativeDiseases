@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="it">
+    <meta name="keywords" content="AI, Emotion Detector, AI Project, Deep Learning">
+
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../static/css/data-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/data-style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/miscellaneous.css') }}">
+
+    <!-- Font Awesome icons (free version)-->
+    <script crossorigin="anonymous" src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
+
+    <title>Alzheimer Disease</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('static/images/aaaa.jpeg');
+            background-attachment: fixed;
+            background-size: 50%;
+            color: white;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        #title {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            margin: 70px;
+            border-radius: 5px;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .heading h1 {
+            color: #ffffff;
+            margin-top: 50px;
+            font-size: 7vw;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .card {
+            flex: 0 0 calc(33% - 20px);
+            max-height: 250px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card-content {
+            padding: 10px;
+            font-size: 85%;
+        }
+
+        .card-content h4 {
+            margin: 0;
+            color: #052049;
+        }
+
+        .card-content p {
+            color: #052049;
+            margin: 5px 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .card-content h4:hover a {
+            color: #5d8bd0;
+        }
+    </style>
+</head>
+
+<body id="top-header" style="">
+
+    <!-- LOADER TEMPLATE -->
+    <div id="page-loader">
+        <div class="loader-icon fa fa-spin colored-border"></div>
+    </div>
+    <!-- /LOADER TEMPLATE -->
+
+    <!-- NAVBAR ================================================= -->
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="{{url_for('home')}}"><strong> Alzheimer AI </strong></a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="{{url_for('home')}}">Home</a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="{{url_for('news')}}">News</a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="miscellaneous.html">Quiz</a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="{{url_for('logout')}}">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <a id="home"></a>
+
+    <!--news slides-->
+    <div class="heading">
+        <h1>NEWS </h1>
+    </div>
+    <div class="container" id="more_info">
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-content">
+                    <h4><a href="https://www.sciencedaily.com/releases/2023/12/231213212527.htm"
+                            style="color: #052049;">Very Irregular Sleep Linked to Higher Risk of Dementia</a></h4>
+                    <p>Sleep regularity is how consistent you are at going to sleep and waking up at the same time each
+                        day.
+                        "Sleep health recommendations often focus on getting the recommended amount of sleep, which is
+                        seven to nine hours a night, but there is less emphasis on maintaining regular sleep schedules,"
+                        said study author Matthew Paul Pase, PhD of Monash University in Melbourne, Australia.
+                        "Our findings suggest the regularity of a person's sleep is an important factor when considering
+                        a person's risk of dementia."
+                        The study involved 88,094 people with an average age of 62 in the United Kingdom.
+                        They were followed for an average of seven years.
+                        Participants wore a wrist device for seven days that measured their sleep cycle.
+                        Researchers then calculated the regularity of participants' sleep.....
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-content">
+                    <h4><a href="https://www.sciencedaily.com/releases/2023/12/231212163348.htm"
+                            style="color: #052049;">Smoking causes brain shrinkage, study finds</a></h4>
+                    <p>he findings, published in Biological Psychiatry: Global Open Science, help explain why smokers are at high risk of age-related cognitive decline and Alzheimer's disease.
+
+                        "Up until recently, scientists have overlooked the effects of smoking on the brain, in part because we were focused on all the terrible effects of smoking on the lungs and the heart," said senior author Laura J. Bierut, MD, the Alumni Endowed Professor of Psychiatry.
+                        
+                        "But as we've started looking at the brain more closely, it's become apparent that smoking is also really bad for your brain."
+                        
+                        Scientists have long known that smoking and smaller brain volume are linked, but they've never been sure which is the instigator.
+                        
+                        And there is a third factor to consider: genetics. Both brain size and smoking behavior are heritable......
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-content">
+                    <h4><a href="https://www.sciencedaily.com/releases/2023/12/231211163510.htm"
+                            style="color: #052049;">Clues to preventing Alzheimer's come from patient who, despite genetics, evaded disease</a></h4>
+                    <p>Researchers at Washington University School of Medicine in St. Louis now think they know why.
+
+                        A previous study had reported that, unlike her relatives, the woman carried two copies of a rare variant of the APOE gene known as the Christchurch mutation.
+                        
+                        In this study, researchers used genetically modified mice to show that the Christchurch mutation severs the link between the early phase of Alzheimer's disease, when a protein called amyloid beta builds up in the brain, and the late phase, when another protein called tau accumulates and cognitive decline sets in. So the woman stayed mentally sharp for decades, even as her brain filled with massive amounts of amyloid.
+                        The findings, published Dec. 11 in the journal Cell, suggest a new approach to preventing Alzheimer's dementia.
+
+                        "Any protective factor is very interesting, because it gives us new clues to how the disease works," said senior author David M. Holtzman, MD, the Barbara Burton and Reuben M. Morriss III Distinguished Professor of Neurology.
+                        .....
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card-content">
+                    <h4><a href="https://www.sciencedaily.com/releases/2023/12/231207160907.htm"
+                            style="color: #052049;">Serotonin loss may contribute to cognitive decline in the early stages of Alzheimer's disease</a></h4>
+                    <p>Comparing PET scans of more than 90 adults with and without mild cognitive impairment (MCI), Johns Hopkins Medicine researchers say relatively lower levels of the so-called "happiness" chemical, serotonin, in parts of the brain of those with MCI may play a role in memory problems including Alzheimer's disease.
+
+                        The findings, first published online Sept. 13 in the Journal of Alzheimer's Disease, lend support to growing evidence that measurable changes in the brain happen in people with mild memory problems long before an Alzheimer's diagnosis, and may offer novel targets for treatments to slow or stop disease progression.
+                        
+                        "The study shows that people with mild cognitive impairment already display loss of the serotonin transporter. This measure that reflects serotonin degeneration is associated with problems with memory, even when we take into account in our statistical model MRI measures of neurodegeneration and PET measures of the amyloid protein that are associated with Alzheimer's Disease," says Gwenn Smith, Ph.D., professor of psychiatry and behavioral sciences at the Johns Hopkins University School of Medicine......
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="card-content">
+                    <h4><a href="https://www.sciencedaily.com/releasNeurodegenerative%20disorders,%20including%20dementias%20and%20Amyotrophic%20Lateral%20Sclerosis%20(ALS),%20occur%20when%20specific%20proteins%20form%20amyloid%20filaments%20in%20the%20nerve%20cells%20of%20the%20brain%20and%20spinal%20cord.%20The%20multidisciplinary%20team%20of%20researchers%20--%20including%20members%20from%20the%20Medical%20Research%20Council%20(MRC)%20Laboratory%20of%20Molecular%20Biology,%20the%20IU%20School%20of%20Medicine%20and%20the%20University%20College%20London%20Queen%20Square%20Institute%20of%20Neurology%20--%20found%20that%20in%20cases%20of%20FTD,%20a%20protein%20called%20TAF15%20forms%20these%20amyloid%20filaments%20in%20the%20cells%20of%20the%20brain%20and%20the%20spinal%20cord.%20On%20December%206,%20they%20published%20their%20findings%20in%20Nature.%20Bernardino%20Ghetti,%20MD%20is%20a%20Distinguished%20Professor%20at%20the%20IU%20School%20of%20Medicine%20and%20has%20been%20studying%20neurodegenerative%20dementias%20for%2050%20years.%20As%20a%20lead%20neuropathologist%20on%20the%20project,%20Ghetti%20and%20his%20team%20studied%20the%20protein%20aggregates%20from%20brains%20donated%20by%20four%20people%20who%20had%20frontotemporal%20dementia%20and%20motor%20weakness.%20Together%20with%20their%20colleagues%20ines/2023/12/231207160832.htm"
+                            style="color: #052049;">Protein found in brain linked to frontotemporal dementia</a></h4>
+                    <p>Neurodegenerative disorders, including dementias and Amyotrophic Lateral Sclerosis (ALS), occur when specific proteins form amyloid filaments in the nerve cells of the brain and spinal cord.
+
+                        The multidisciplinary team of researchers -- including members from the Medical Research Council (MRC) Laboratory of Molecular Biology, the IU School of Medicine and the University College London Queen Square Institute of Neurology -- found that in cases of FTD, a protein called TAF15 forms these amyloid filaments in the cells of the brain and the spinal cord.
+                        
+                        On December 6, they published their findings in Nature.
+                        
+                        Bernardino Ghetti, MD is a Distinguished Professor at the IU School of Medicine and has been studying neurodegenerative dementias for 50 years.
+                        
+                        As a lead neuropathologist on the project, Ghetti and his team studied the protein aggregates from brains donated by four people who had frontotemporal dementia and motor weakness.
+                        
+                        Together with their colleagues in.....
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="card-content">
+                    <h4><a href="https://www.sciencedaily.com/releases/2023/12/231213212527.htm"
+                            style="color: #052049;">Very high levels of 'good cholesterol' may be associated with dementia risk</a></h4>
+                    <p>abnormally high levels of HDL-C, colloquially known as 'good cholesterol', are associated with an increased risk of dementia in older adults, a Monash University-led study has found.
+
+                        Researchers said very high levels of HDL-C linked to dementia risk in this study were uncommon and not diet related, but more likely to reflect a metabolic disorder.
+                        
+                        The findings may help doctors to recognise a group of older patients potentially at risk of dementia, particularly in those aged 75 and older.
+                        
+                        Published in The Lancet Regional Health -- Western Pacific, this is one of the largest studies of elevated HDL-C levels and dementia in initially healthy older people aged mostly over 70, enrolled in the ASPREE* study.
+                        
+                        .....
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main jQuery -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
