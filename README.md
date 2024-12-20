@@ -30,4 +30,8 @@ These instructions will help you set up the project on your local machine.
    cd <filename>
    pip install -r requirements.txt
    python app.py
+2. **Open URL**
+   After running the command, you will see a local server URL (usually http://127.0.0.1:5000/). Open this URL in your browser.
+3. **Signup and Login**
+    Once the application is running, you can sign up for an account and log in to access the application interface.
 
