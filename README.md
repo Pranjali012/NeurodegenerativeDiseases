@@ -27,3 +27,7 @@ These instructions will help you set up the project on your local machine.
 
    ```bash
    git clone <repository_url>
+   cd <filename>
+   pip install -r requirements.txt
+   python app.py
+
